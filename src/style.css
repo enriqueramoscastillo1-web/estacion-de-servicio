@@ -1,0 +1,310 @@
+/* VARIABLES GENERALES */
+
+:root {
+  font-family: 'Roboto', Arial, sans-serif;
+
+  --color-primary: #006b3f;
+  --color-secondary: #f4b400;
+  --color-background: #f8f9fa;
+  --color-text: #212529;
+  --color-white: #ffffff;
+
+  --radius: 12px;
+
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 30px;
+}
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* ENCABEZADO */
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: var(--space-md);
+}
+
+.bienvenida {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* DEPARTAMENTOS */
+
+.departamentos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+/* TARJETAS */
+
+.tarjeta {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  text-align: center;
+  flex: 1 1 280px;
+  max-width: 450px;
+  box-shadow: 0 4px 12px #00000015;
+}
+
+/* BOTONES */
+
+button {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* CONTENIDO DINÁMICO */
+
+#contenido {
+  margin-top: var(--space-lg);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* ==========================================
+   GALERÍA DE PRODUCTOS
+========================================== */
+
+#galeria-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+      minmax(min(100%, 220px), 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.tarjeta-producto {
+  background-color: var(--color-card, #ffffff);
+  padding: 20px;
+  border-radius: var(--radius, 12px);
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-producto h3 {
+  margin-bottom: 10px;
+}
+
+#seccion-tienda[hidden] {
+  display: none;
+}
+
+/* ==========================================
+   FILTROS DE CATEGORÍA
+========================================== */
+
+.filtros-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.btn-filtro {
+  background-color: var(--color-primary, #006b3f);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius, 8px);
+  cursor: pointer;
+}
+
+.btn-filtro:hover {
+  opacity: 0.85;
+}
+
+/* ==========================================
+   FILTRO POR PRECIO MÁXIMO
+========================================== */
+
+#formPrecio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+#precioMaximo {
+  padding: 10px;
+  border: 1px solid var(--color-border, #cccccc);
+  border-radius: var(--radius, 8px);
+  max-width: 180px;
+}
+
+#formPrecio button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius, 8px);
+  cursor: pointer;
+}
+
+#mensajeFiltro {
+  text-align: center;
+}
+
+/* ==========================================
+   FILTRO POR PRECIO MÁXIMO
+========================================== */
+
+#formPrecio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+#precioMaximo {
+  padding: 10px;
+  border: 1px solid var(--color-border, #cccccc);
+  border-radius: var(--radius, 8px);
+  max-width: 180px;
+}
+
+#formPrecio button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius, 8px);
+  cursor: pointer;
+}
+
+#mensajeFiltro {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* ==========================================
+   SECCIÓN PISTA
+========================================== */
+
+#seccion-pista {
+  margin-top: 30px;
+}
+
+#galeria-combustibles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+      minmax(min(100%, 220px), 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+#formDespacho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#formDespacho input,
+#formDespacho select {
+  padding: 12px;
+  border: 1px solid var(--color-border, #cccccc);
+  border-radius: var(--radius, 8px);
+  font-size: 16px;
+}
+
+#formDespacho button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius, 8px);
+  background-color: var(--color-primary, #006b3f);
+  color: white;
+  cursor: pointer;
+}
+
+.resultado-combustible {
+  background-color: var(--color-card, #ffffff);
+  padding: 20px;
+  border-radius: var(--radius, 12px);
+  margin-top: 20px;
+  border-left: 5px solid var(--color-primary, #006b3f);
+}
+
+/* ==========================================
+   SELECCIÓN DE PRODUCTOS
+========================================== */
+
+.seleccion-producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.check-producto {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-primary, #006b3f);
+}
+
+/* RESUMEN FINAL */
+
+#resumenCompra {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: var(--color-card, #ffffff);
+  border-radius: var(--radius, 12px);
+  text-align: center;
+  border: 2px solid var(--color-primary, #006b3f);
+}
+
+#cantidadSeleccionada {
+  margin: 15px 0;
+}
+
+#totalPagar {
+  color: var(--color-primary, #006b3f);
+  font-size: 26px;
+  font-weight: bold;
+}
